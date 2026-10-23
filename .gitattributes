@@ -1,0 +1,8 @@
+# GitHub Linguist 不识别 ArkTS 的 .ets，按 TypeScript 统计
+*.ets linguist-language=TypeScript
+*.ets linguist-detectable=true
+
+# 二进制资源
+*.hap binary
+*.metadb binary
+*.dat binary
