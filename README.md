@@ -46,25 +46,39 @@ Get-FileHash .\clashmate-2.11.36-unsigned.hap -Algorithm SHA256
 
 期望值见 [`release/SHA256SUMS.txt`](release/SHA256SUMS.txt)。
 
-### 签名后安装
+### 签名方法
 
-未签名包必须先用自己的证书和 profile 签名。两种方式：
+这个项目只做侧载/内测分发，**不通过 AppGallery 上架**。未签名 HAP 不能直接安装，必须用华为签发的证书和 Profile 签名。
 
-**方式 A：DevEco Studio 自动签名（推荐）**
+> 零售 HarmonyOS 手机不信任 OpenHarmony 自签证书。自己用 openssl 生成的自签证书只能用于 OpenHarmony 设备或已预置根证书的环境；普通鸿蒙手机需要 DevEco 自动签名，或 AGC 的调试/内部测试 Profile。
+
+#### 方法 A：DevEco Studio 自动签名（推荐）
 
 1. 用 DevEco Studio 打开 `apps/ClashMate`
 2. `File → Project Structure → Project → Signing Configs`
 3. 勾选自动生成签名，登录华为账号
 4. 连接手机/平板，直接 Run，或 Build 出已签名 HAP
 
-**方式 B：已有证书，用 SDK 工具签名**
+DevEco 会自动处理调试证书、带设备 UDID 的 Profile 和签名，最省事。
 
-用 HarmonyOS SDK 里的 `hap-sign-tool.jar`（一般在 `toolchains/lib` 下），按自己的 `app.cer`、`.p7b`、`.p12` 签名。不同 SDK 版本参数略有差异，以本机工具帮助为准。
+#### 方法 B：hap-sign-tool.jar 命令行重签
 
-签名完成后安装：
+适合已有 `.p12` / `.cer` / `.p7b`，或者要在 CI 里签名。工具在 SDK 的 `toolchains/lib` 下：
 
 ```powershell
-hdc install .\entry-default-signed.hap
+java -jar "C:\path\to\hap-sign-tool.jar" sign-app -mode localSign -keyAlias "<别名>" -signAlg SHA256withECDSA -appCertFile "<app.cer>" -profileFile "<profile.p7b>" -inFile "clashmate-2.11.36-unsigned.hap" -keystoreFile "<app.p12>" -outFile "clashmate-signed.hap" -keyPwd "<key密码>" -keystorePwd "<store密码>" -signCode "1"
+```
+
+- `-appCertFile` 是应用签名证书链（终端证书 → 中间 CA → 根证书）
+- `-profileFile` 是**已签名**的 `.p7b`，不是未签名的 profile JSON
+- `-signCode 1` 对 HAP 开启代码签名
+- 密码填实际密码，不是 `build-profile.json5` 里的加密串
+- 需要 JDK 8+
+
+签名后安装：
+
+```powershell
+hdc install .\clashmate-signed.hap
 ```
 
 如果设备上已有用其他证书签名的旧版本，需要先卸载，卸载会清空 App 数据：
@@ -72,6 +86,54 @@ hdc install .\entry-default-signed.hap
 ```powershell
 hdc uninstall com.dafeiyu.clashmate
 ```
+
+官方工具源码和参数说明：https://github.com/openharmony/developtools_hapsigner
+
+注意：`hap-sign-tool.jar` 只负责“签”，不能凭空签发华为信任的 Profile；Profile 仍需来自 DevEco 自动签名或 AGC。
+
+#### 方法 C：GitHub 上的第三方工具
+
+这些工具能减少手工步骤，但都属于第三方，使用前自己看源码/Release，不要把正式证书或主华为账号交给不可信工具。
+
+**1. hpack**（Python，Apache-2.0）
+
+适合内测打包、签名、上传和安装，使用你自己的 `.cer`、内部测试 `.p7b`、`.p12`。
+
+```powershell
+pip install harmony-hpack
+hpack init
+# 编辑 hpack/config.py，把三个证书文件放进 hpack/sign/
+hpack p
+hpack i
+```
+
+需要 AGC 的**内部测试 Profile**（包含设备 UDID），并确保 `hvigorw`、`hdc`、JDK 17+、Python 3.10+ 可用。仓库：https://github.com/iHongRen/hpack
+
+**2. 鸿蒙安装助手 / hap-installer**（Windows GUI）
+
+双击运行，连接设备后登录华为账号，把 HAP 拖进去，点“签名并安装”。它会自动创建调试 Profile，内置的是公开调试签名材料（来自 `likuai2010/auto-installer`），不需要自己准备证书。
+
+仓库：https://github.com/amw1933/hap-installer
+
+注意：
+
+- 它会要求登录华为账号，并接触调试签名材料
+- 内置的是**公共调试身份**，不是你的私有证书，不能用于正式发布
+- 建议用测试账号，不要在不可信环境里登录主账号
+
+**3. 小白调试助手 / auto-installer**
+
+多平台 HAP 安装/调试工具，支持自定义证书；上面的公开调试材料就来自这个项目。
+
+仓库：https://github.com/likuai2010/auto-installer
+
+#### 签名会过期
+
+手机端**不会自动续期**签名。证书/Profile 到期前要在 DevEco 或 AGC 重新签发，再重新构建、安装。
+
+- 用同一个 `.p12` 密钥重签：`hdc install -r` 可以覆盖安装，数据保留
+- 自动签名重新生成了新密钥：签名变了，只能先卸载再装，数据会丢
+- 证书/Profile 过期后，安装/更新可能被系统拒绝；不要等到过期再处理
 
 ## 构建
 

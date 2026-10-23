@@ -14,7 +14,7 @@
 
 ## 安装
 
-这个包由本仓库源码构建，**未签名**，不能直接 `hdc install`。
+这个包由本仓库源码构建，**未签名**，不能直接 `hdc install`。本项目只做侧载/内测，不上架 AppGallery。
 
 1. 用 DevEco Studio 打开 `apps/ClashMate`
 2. `File → Project Structure → Project → Signing Configs`
@@ -32,6 +32,14 @@ hdc install .\entry-default-signed.hap
 hdc uninstall com.dafeiyu.clashmate
 ```
 
+## 签名工具
+
+- 官方 `hap-sign-tool.jar`：SDK `toolchains/lib` 下，参数见 https://github.com/openharmony/developtools_hapsigner
+- **hpack**（内测签名/分发，需自己的 `.cer`/`.p7b`/`.p12`）：https://github.com/iHongRen/hpack
+- **鸿蒙安装助手**（Windows，登录华为账号后一键签名安装）：https://github.com/amw1933/hap-installer
+- **小白调试助手**（多平台安装/调试）：https://github.com/likuai2010/auto-installer
+
+普通 HarmonyOS 手机需要华为签发的调试/内部测试 Profile；OpenHarmony 自签证书不能直接用于零售鸿蒙手机。第三方工具涉及华为账号和签名材料，请自行评估风险，不要用正式证书或主账号。
 - 许可证：GPL-3.0，见 `LICENSE`
 - 第三方组件：见 `NOTICE`
 - 完整说明：见仓库根目录 `README.md`
