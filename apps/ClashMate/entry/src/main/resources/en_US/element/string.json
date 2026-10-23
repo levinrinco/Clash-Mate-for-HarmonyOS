@@ -1,0 +1,572 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "Clash Mate main module"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "Clash Mate"
+    },
+    {
+      "name": "EntryAbility_label",
+      "value": "Clash Mate"
+    },
+    {
+      "name": "launch_name",
+      "value": "Clash Mate"
+    },
+    {
+      "name": "application_name",
+      "value": "Clash Mate for HarmonyOS"
+    },
+    {
+      "name": "application_subtitle",
+      "value": "for HarmonyOS"
+    },
+    {
+      "name": "running",
+      "value": "Running"
+    },
+    {
+      "name": "stopped",
+      "value": "Stopped"
+    },
+    {
+      "name": "tap_to_start",
+      "value": "Tap to start"
+    },
+    {
+      "name": "format_traffic_forwarded",
+      "value": "%s Forwarded"
+    },
+    {
+      "name": "proxy",
+      "value": "Proxy"
+    },
+    {
+      "name": "profile",
+      "value": "Profile"
+    },
+    {
+      "name": "not_selected",
+      "value": "Not selected"
+    },
+    {
+      "name": "format_profile_activated",
+      "value": "%s Activated"
+    },
+    {
+      "name": "logs",
+      "value": "Logs"
+    },
+    {
+      "name": "settings",
+      "value": "Settings"
+    },
+    {
+      "name": "help",
+      "value": "Help"
+    },
+    {
+      "name": "about",
+      "value": "About"
+    },
+    {
+      "name": "rule_mode",
+      "value": "Rule Mode"
+    },
+    {
+      "name": "global_mode",
+      "value": "Global Mode"
+    },
+    {
+      "name": "direct_mode",
+      "value": "Direct Mode"
+    },
+    {
+      "name": "unable_to_start_vpn",
+      "value": "Unable to start VPN component"
+    },
+    {
+      "name": "profile_add",
+      "value": "Add Profile"
+    },
+    {
+      "name": "profile_url",
+      "value": "Subscription URL"
+    },
+    {
+      "name": "profile_name",
+      "value": "Name (optional)"
+    },
+    {
+      "name": "delete",
+      "value": "Delete"
+    },
+    {
+      "name": "add",
+      "value": "Add"
+    },
+    {
+      "name": "cancel",
+      "value": "Cancel"
+    },
+    {
+      "name": "empty_profiles",
+      "value": "No profiles yet"
+    },
+    {
+      "name": "clear",
+      "value": "Clear"
+    },
+    {
+      "name": "clear_all",
+      "value": "Delete all profiles"
+    },
+    {
+      "name": "cleared",
+      "value": "Cleared"
+    },
+    {
+      "name": "help_text",
+      "value": "Clash Mate for HarmonyOS is freeware. We do not provide any service for it."
+    },
+    {
+      "name": "shortcut_start",
+      "value": "Start Clash"
+    },
+    {
+      "name": "shortcut_stop",
+      "value": "Stop Clash"
+    },
+    {
+      "name": "card_session",
+      "value": "session"
+    },
+    {
+      "name": "card_used",
+      "value": "used"
+    },
+    {
+      "name": "widget_desc",
+      "value": "Clash Mate switch"
+    },
+    {
+      "name": "about_license",
+      "value": "Released under GPL-3.0, based on the mihomo core."
+    },
+    {
+      "name": "settings_proxy_group",
+      "value": "Proxy"
+    },
+    {
+      "name": "settings_network_group",
+      "value": "Network"
+    },
+    {
+      "name": "mode_label",
+      "value": "Mode"
+    },
+    {
+      "name": "log_level_label",
+      "value": "Log level"
+    },
+    {
+      "name": "mixed_port_label",
+      "value": "Mixed port"
+    },
+    {
+      "name": "allow_lan_label",
+      "value": "Allow LAN"
+    },
+    {
+      "name": "ipv6_label",
+      "value": "IPv6"
+    },
+    {
+      "name": "dns_hijack_label",
+      "value": "DNS hijack"
+    },
+    {
+      "name": "external_controller_label",
+      "value": "External controller"
+    },
+    {
+      "name": "mode_rule",
+      "value": "Rule"
+    },
+    {
+      "name": "mode_global",
+      "value": "Global"
+    },
+    {
+      "name": "mode_direct",
+      "value": "Direct"
+    },
+    {
+      "name": "log_silent",
+      "value": "Silent"
+    },
+    {
+      "name": "log_error",
+      "value": "Error"
+    },
+    {
+      "name": "log_warning",
+      "value": "Warning"
+    },
+    {
+      "name": "log_info",
+      "value": "Info"
+    },
+    {
+      "name": "log_debug",
+      "value": "Debug"
+    },
+    {
+      "name": "s_no_modify",
+      "value": "Follow config"
+    },
+    {
+      "name": "s_enabled",
+      "value": "Enabled"
+    },
+    {
+      "name": "s_disabled",
+      "value": "Disabled"
+    },
+    {
+      "name": "http_port_label",
+      "value": "HTTP port"
+    },
+    {
+      "name": "socks_port_label",
+      "value": "SOCKS port"
+    },
+    {
+      "name": "authentication_label",
+      "value": "Authentication"
+    },
+    {
+      "name": "bind_address_label",
+      "value": "Bind address"
+    },
+    {
+      "name": "ext_controller_label",
+      "value": "External controller"
+    },
+    {
+      "name": "ext_controller_tls_label",
+      "value": "External controller TLS"
+    },
+    {
+      "name": "allow_origins_label",
+      "value": "Allow origins"
+    },
+    {
+      "name": "allow_private_network_label",
+      "value": "Allow private network"
+    },
+    {
+      "name": "secret_label",
+      "value": "Secret"
+    },
+    {
+      "name": "hosts_label",
+      "value": "Hosts"
+    },
+    {
+      "name": "bypass_private_label",
+      "value": "Bypass private network"
+    },
+    {
+      "name": "allow_ipv6_label",
+      "value": "Allow IPv6"
+    },
+    {
+      "name": "tun_stack_label",
+      "value": "TUN stack"
+    },
+    {
+      "name": "dns_group",
+      "value": "DNS"
+    },
+    {
+      "name": "dns_strategy_label",
+      "value": "DNS strategy"
+    },
+    {
+      "name": "prefer_h3_label",
+      "value": "Prefer H3"
+    },
+    {
+      "name": "dns_listen_label",
+      "value": "Listen"
+    },
+    {
+      "name": "append_system_dns_label",
+      "value": "Append system DNS"
+    },
+    {
+      "name": "use_hosts_label",
+      "value": "Use hosts"
+    },
+    {
+      "name": "enhanced_mode_label",
+      "value": "Enhanced mode"
+    },
+    {
+      "name": "name_server_label",
+      "value": "Name server"
+    },
+    {
+      "name": "fallback_label",
+      "value": "Fallback"
+    },
+    {
+      "name": "default_name_server_label",
+      "value": "Default name server"
+    },
+    {
+      "name": "fakeip_filter_label",
+      "value": "FakeIP filter"
+    },
+    {
+      "name": "fakeip_filter_mode_label",
+      "value": "FakeIP mode"
+    },
+    {
+      "name": "geoip_fallback_label",
+      "value": "GeoIP fallback"
+    },
+    {
+      "name": "geoip_fallback_code_label",
+      "value": "GeoIP code"
+    },
+    {
+      "name": "domain_fallback_label",
+      "value": "Domain fallback"
+    },
+    {
+      "name": "ipcidr_fallback_label",
+      "value": "IPCIDR fallback"
+    },
+    {
+      "name": "name_server_policy_label",
+      "value": "Name server policy"
+    },
+    {
+      "name": "kernel_group",
+      "value": "Kernel"
+    },
+    {
+      "name": "unified_delay_label",
+      "value": "Unified delay"
+    },
+    {
+      "name": "geodata_mode_label",
+      "value": "Geodata mode"
+    },
+    {
+      "name": "tcp_concurrent_label",
+      "value": "TCP concurrent"
+    },
+    {
+      "name": "find_process_label",
+      "value": "Find process"
+    },
+    {
+      "name": "sniffer_label",
+      "value": "Sniffer strategy"
+    },
+    {
+      "name": "sniff_http_ports_label",
+      "value": "HTTP sniff ports"
+    },
+    {
+      "name": "sniff_http_override_label",
+      "value": "HTTP override destination"
+    },
+    {
+      "name": "sniff_tls_ports_label",
+      "value": "TLS sniff ports"
+    },
+    {
+      "name": "sniff_tls_override_label",
+      "value": "TLS override destination"
+    },
+    {
+      "name": "sniff_quic_ports_label",
+      "value": "QUIC sniff ports"
+    },
+    {
+      "name": "sniff_quic_override_label",
+      "value": "QUIC override destination"
+    },
+    {
+      "name": "force_dns_mapping_label",
+      "value": "Force DNS mapping"
+    },
+    {
+      "name": "parse_pure_ip_label",
+      "value": "Parse pure IP"
+    },
+    {
+      "name": "override_destination_label",
+      "value": "Override destination"
+    },
+    {
+      "name": "force_domain_label",
+      "value": "Force domain"
+    },
+    {
+      "name": "skip_domain_label",
+      "value": "Skip domain"
+    },
+    {
+      "name": "skip_src_label",
+      "value": "Skip source address"
+    },
+    {
+      "name": "skip_dst_label",
+      "value": "Skip destination address"
+    },
+    {
+      "name": "app_group",
+      "value": "App"
+    },
+    {
+      "name": "auto_restart_label",
+      "value": "Auto restart"
+    },
+    {
+      "name": "dark_mode_label",
+      "value": "Dark mode"
+    },
+    {
+      "name": "opt_gvisor",
+      "value": "gvisor"
+    },
+    {
+      "name": "opt_system_stack",
+      "value": "System"
+    },
+    {
+      "name": "opt_normal",
+      "value": "Normal"
+    },
+    {
+      "name": "opt_fakeip",
+      "value": "Fake-IP"
+    },
+    {
+      "name": "opt_standard",
+      "value": "Standard"
+    },
+    {
+      "name": "opt_memconservative",
+      "value": "Memory saving"
+    },
+    {
+      "name": "opt_light",
+      "value": "Light"
+    },
+    {
+      "name": "opt_dark",
+      "value": "Dark"
+    },
+    {
+      "name": "opt_follow_system",
+      "value": "Follow system"
+    },
+    {
+      "name": "opt_always",
+      "value": "Always"
+    },
+    {
+      "name": "opt_strict",
+      "value": "Strict"
+    },
+    {
+      "name": "opt_off",
+      "value": "Off"
+    },
+    {
+      "name": "opt_blacklist",
+      "value": "Blacklist"
+    },
+    {
+      "name": "opt_whitelist",
+      "value": "Whitelist"
+    },
+    {
+      "name": "opt_prefer_ipv4",
+      "value": "Prefer IPv4"
+    },
+    {
+      "name": "opt_prefer_ipv6",
+      "value": "Prefer IPv6"
+    },
+    {
+      "name": "opt_ipv4_only",
+      "value": "IPv4 only"
+    },
+    {
+      "name": "opt_ipv6_only",
+      "value": "IPv6 only"
+    },
+    {
+      "name": "s_ok",
+      "value": "OK"
+    },
+    {
+      "name": "s_clear",
+      "value": "Clear"
+    },
+    {
+      "name": "reset_settings_message",
+      "value": "All settings will be restored to defaults"
+    },
+    {
+      "name": "reset_settings",
+      "value": "Restore defaults"
+    },
+    {
+      "name": "clear_profiles_message",
+      "value": "All profiles will be deleted permanently"
+    },
+    {
+      "name": "notify_label",
+      "value": "Ongoing notification"
+    },
+    {
+      "name": "log_warn",
+      "value": "Warning"
+    },
+    {
+      "name": "clear_logs",
+      "value": "Clear logs"
+    },
+    {
+      "name": "log_empty",
+      "value": "No logs"
+    },
+    {
+      "name": "log_all",
+      "value": "All"
+    },
+    {
+      "name": "log_events",
+      "value": "Events"
+    },
+    {
+      "name": "log_session",
+      "value": "Sessions"
+    },
+    {
+      "name": "log_kb",
+      "value": "KB"
+    }
+  ]
+}

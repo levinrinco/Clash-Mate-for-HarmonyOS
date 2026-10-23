@@ -1,0 +1,572 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "Clash Mate 主模块"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "Clash Mate"
+    },
+    {
+      "name": "EntryAbility_label",
+      "value": "Clash Mate"
+    },
+    {
+      "name": "launch_name",
+      "value": "Clash Mate"
+    },
+    {
+      "name": "application_name",
+      "value": "Clash Mate for HarmonyOS"
+    },
+    {
+      "name": "application_subtitle",
+      "value": "for HarmonyOS"
+    },
+    {
+      "name": "running",
+      "value": "运行中"
+    },
+    {
+      "name": "stopped",
+      "value": "已停止"
+    },
+    {
+      "name": "tap_to_start",
+      "value": "点此启动"
+    },
+    {
+      "name": "format_traffic_forwarded",
+      "value": "%s 已转发"
+    },
+    {
+      "name": "proxy",
+      "value": "代理"
+    },
+    {
+      "name": "profile",
+      "value": "配置"
+    },
+    {
+      "name": "not_selected",
+      "value": "未选择"
+    },
+    {
+      "name": "format_profile_activated",
+      "value": "%s 已激活"
+    },
+    {
+      "name": "logs",
+      "value": "日志"
+    },
+    {
+      "name": "settings",
+      "value": "设置"
+    },
+    {
+      "name": "help",
+      "value": "帮助"
+    },
+    {
+      "name": "about",
+      "value": "关于"
+    },
+    {
+      "name": "rule_mode",
+      "value": "规则模式"
+    },
+    {
+      "name": "global_mode",
+      "value": "全局模式"
+    },
+    {
+      "name": "direct_mode",
+      "value": "直连模式"
+    },
+    {
+      "name": "unable_to_start_vpn",
+      "value": "无法启动 VPN 组件"
+    },
+    {
+      "name": "profile_add",
+      "value": "添加配置"
+    },
+    {
+      "name": "profile_url",
+      "value": "订阅链接"
+    },
+    {
+      "name": "profile_name",
+      "value": "名称（可选）"
+    },
+    {
+      "name": "delete",
+      "value": "删除"
+    },
+    {
+      "name": "add",
+      "value": "添加"
+    },
+    {
+      "name": "cancel",
+      "value": "取消"
+    },
+    {
+      "name": "empty_profiles",
+      "value": "还没有配置"
+    },
+    {
+      "name": "clear",
+      "value": "清空"
+    },
+    {
+      "name": "clear_all",
+      "value": "删除所有配置"
+    },
+    {
+      "name": "cleared",
+      "value": "已清除"
+    },
+    {
+      "name": "help_text",
+      "value": "Clash Mate for HarmonyOS 是免费软件，不提供任何服务。请勿反馈非应用自身引起的问题。"
+    },
+    {
+      "name": "shortcut_start",
+      "value": "启动 Clash"
+    },
+    {
+      "name": "shortcut_stop",
+      "value": "停止 Clash"
+    },
+    {
+      "name": "card_session",
+      "value": "本次"
+    },
+    {
+      "name": "card_used",
+      "value": "已用"
+    },
+    {
+      "name": "widget_desc",
+      "value": "Clash Mate 开关"
+    },
+    {
+      "name": "about_license",
+      "value": "以 GPL-3.0 许可证发布，基于 mihomo 内核。"
+    },
+    {
+      "name": "settings_proxy_group",
+      "value": "代理"
+    },
+    {
+      "name": "settings_network_group",
+      "value": "网络"
+    },
+    {
+      "name": "mode_label",
+      "value": "模式"
+    },
+    {
+      "name": "log_level_label",
+      "value": "日志级别"
+    },
+    {
+      "name": "mixed_port_label",
+      "value": "混合端口"
+    },
+    {
+      "name": "allow_lan_label",
+      "value": "允许局域网"
+    },
+    {
+      "name": "ipv6_label",
+      "value": "IPv6"
+    },
+    {
+      "name": "dns_hijack_label",
+      "value": "DNS 劫持"
+    },
+    {
+      "name": "external_controller_label",
+      "value": "外部控制"
+    },
+    {
+      "name": "mode_rule",
+      "value": "规则"
+    },
+    {
+      "name": "mode_global",
+      "value": "全局"
+    },
+    {
+      "name": "mode_direct",
+      "value": "直连"
+    },
+    {
+      "name": "log_silent",
+      "value": "静默"
+    },
+    {
+      "name": "log_error",
+      "value": "错误"
+    },
+    {
+      "name": "log_warning",
+      "value": "警告"
+    },
+    {
+      "name": "log_info",
+      "value": "信息"
+    },
+    {
+      "name": "log_debug",
+      "value": "调试"
+    },
+    {
+      "name": "s_no_modify",
+      "value": "跟随配置"
+    },
+    {
+      "name": "s_enabled",
+      "value": "开启"
+    },
+    {
+      "name": "s_disabled",
+      "value": "关闭"
+    },
+    {
+      "name": "http_port_label",
+      "value": "HTTP 端口"
+    },
+    {
+      "name": "socks_port_label",
+      "value": "SOCKS 端口"
+    },
+    {
+      "name": "authentication_label",
+      "value": "认证"
+    },
+    {
+      "name": "bind_address_label",
+      "value": "绑定地址"
+    },
+    {
+      "name": "ext_controller_label",
+      "value": "外部控制"
+    },
+    {
+      "name": "ext_controller_tls_label",
+      "value": "外部控制 TLS"
+    },
+    {
+      "name": "allow_origins_label",
+      "value": "允许来源"
+    },
+    {
+      "name": "allow_private_network_label",
+      "value": "允许私有网络"
+    },
+    {
+      "name": "secret_label",
+      "value": "密钥"
+    },
+    {
+      "name": "hosts_label",
+      "value": "Hosts"
+    },
+    {
+      "name": "bypass_private_label",
+      "value": "绕过私有网络"
+    },
+    {
+      "name": "allow_ipv6_label",
+      "value": "允许 IPv6"
+    },
+    {
+      "name": "tun_stack_label",
+      "value": "TUN 栈"
+    },
+    {
+      "name": "dns_group",
+      "value": "DNS"
+    },
+    {
+      "name": "dns_strategy_label",
+      "value": "DNS 策略"
+    },
+    {
+      "name": "prefer_h3_label",
+      "value": "优先 H3"
+    },
+    {
+      "name": "dns_listen_label",
+      "value": "监听地址"
+    },
+    {
+      "name": "append_system_dns_label",
+      "value": "追加系统 DNS"
+    },
+    {
+      "name": "use_hosts_label",
+      "value": "使用 Hosts"
+    },
+    {
+      "name": "enhanced_mode_label",
+      "value": "增强模式"
+    },
+    {
+      "name": "name_server_label",
+      "value": "上游 DNS"
+    },
+    {
+      "name": "fallback_label",
+      "value": "备用 DNS"
+    },
+    {
+      "name": "default_name_server_label",
+      "value": "默认 DNS"
+    },
+    {
+      "name": "fakeip_filter_label",
+      "value": "FakeIP 过滤"
+    },
+    {
+      "name": "fakeip_filter_mode_label",
+      "value": "FakeIP 模式"
+    },
+    {
+      "name": "geoip_fallback_label",
+      "value": "GeoIP 备用"
+    },
+    {
+      "name": "geoip_fallback_code_label",
+      "value": "GeoIP 代码"
+    },
+    {
+      "name": "domain_fallback_label",
+      "value": "域名备用"
+    },
+    {
+      "name": "ipcidr_fallback_label",
+      "value": "IP 段备用"
+    },
+    {
+      "name": "name_server_policy_label",
+      "value": "DNS 策略组"
+    },
+    {
+      "name": "kernel_group",
+      "value": "内核"
+    },
+    {
+      "name": "unified_delay_label",
+      "value": "统一延迟"
+    },
+    {
+      "name": "geodata_mode_label",
+      "value": "Geodata 模式"
+    },
+    {
+      "name": "tcp_concurrent_label",
+      "value": "TCP 并发"
+    },
+    {
+      "name": "find_process_label",
+      "value": "进程查找"
+    },
+    {
+      "name": "sniffer_label",
+      "value": "嗅探策略"
+    },
+    {
+      "name": "sniff_http_ports_label",
+      "value": "HTTP 嗅探端口"
+    },
+    {
+      "name": "sniff_http_override_label",
+      "value": "HTTP 覆盖目标"
+    },
+    {
+      "name": "sniff_tls_ports_label",
+      "value": "TLS 嗅探端口"
+    },
+    {
+      "name": "sniff_tls_override_label",
+      "value": "TLS 覆盖目标"
+    },
+    {
+      "name": "sniff_quic_ports_label",
+      "value": "QUIC 嗅探端口"
+    },
+    {
+      "name": "sniff_quic_override_label",
+      "value": "QUIC 覆盖目标"
+    },
+    {
+      "name": "force_dns_mapping_label",
+      "value": "强制 DNS 映射"
+    },
+    {
+      "name": "parse_pure_ip_label",
+      "value": "解析纯 IP"
+    },
+    {
+      "name": "override_destination_label",
+      "value": "覆盖目标"
+    },
+    {
+      "name": "force_domain_label",
+      "value": "强制域名"
+    },
+    {
+      "name": "skip_domain_label",
+      "value": "跳过域名"
+    },
+    {
+      "name": "skip_src_label",
+      "value": "跳过源地址"
+    },
+    {
+      "name": "skip_dst_label",
+      "value": "跳过目标地址"
+    },
+    {
+      "name": "app_group",
+      "value": "应用"
+    },
+    {
+      "name": "auto_restart_label",
+      "value": "自动重启"
+    },
+    {
+      "name": "dark_mode_label",
+      "value": "深色模式"
+    },
+    {
+      "name": "opt_gvisor",
+      "value": "gvisor"
+    },
+    {
+      "name": "opt_system_stack",
+      "value": "系统"
+    },
+    {
+      "name": "opt_normal",
+      "value": "普通"
+    },
+    {
+      "name": "opt_fakeip",
+      "value": "Fake-IP"
+    },
+    {
+      "name": "opt_standard",
+      "value": "标准"
+    },
+    {
+      "name": "opt_memconservative",
+      "value": "精简"
+    },
+    {
+      "name": "opt_light",
+      "value": "浅色"
+    },
+    {
+      "name": "opt_dark",
+      "value": "深色"
+    },
+    {
+      "name": "opt_follow_system",
+      "value": "跟随系统"
+    },
+    {
+      "name": "opt_always",
+      "value": "始终"
+    },
+    {
+      "name": "opt_strict",
+      "value": "严格"
+    },
+    {
+      "name": "opt_off",
+      "value": "关闭"
+    },
+    {
+      "name": "opt_blacklist",
+      "value": "黑名单"
+    },
+    {
+      "name": "opt_whitelist",
+      "value": "白名单"
+    },
+    {
+      "name": "opt_prefer_ipv4",
+      "value": "优先 IPv4"
+    },
+    {
+      "name": "opt_prefer_ipv6",
+      "value": "优先 IPv6"
+    },
+    {
+      "name": "opt_ipv4_only",
+      "value": "仅 IPv4"
+    },
+    {
+      "name": "opt_ipv6_only",
+      "value": "仅 IPv6"
+    },
+    {
+      "name": "s_ok",
+      "value": "确定"
+    },
+    {
+      "name": "s_clear",
+      "value": "清除"
+    },
+    {
+      "name": "reset_settings_message",
+      "value": "所有设置将恢复为默认值"
+    },
+    {
+      "name": "reset_settings",
+      "value": "还原默认设置"
+    },
+    {
+      "name": "clear_profiles_message",
+      "value": "将删除全部订阅配置，无法恢复"
+    },
+    {
+      "name": "notify_label",
+      "value": "常驻通知"
+    },
+    {
+      "name": "log_warn",
+      "value": "警告"
+    },
+    {
+      "name": "clear_logs",
+      "value": "清空日志"
+    },
+    {
+      "name": "log_empty",
+      "value": "暂无日志"
+    },
+    {
+      "name": "log_all",
+      "value": "全部"
+    },
+    {
+      "name": "log_events",
+      "value": "事件"
+    },
+    {
+      "name": "log_session",
+      "value": "会话"
+    },
+    {
+      "name": "log_kb",
+      "value": "KB"
+    }
+  ]
+}

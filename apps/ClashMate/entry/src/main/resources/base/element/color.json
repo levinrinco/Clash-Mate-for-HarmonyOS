@@ -1,0 +1,13 @@
+{
+  "color": [
+    { "name": "background", "value": "#FAFAFA" },
+    { "name": "surface", "value": "#FFFFFF" },
+    { "name": "clash_started", "value": "#1E4376" },
+    { "name": "clash_stopped", "value": "#808080" },
+    { "name": "text_primary", "value": "#000000" },
+    { "name": "text_secondary", "value": "#99000000" },
+    { "name": "text_inverse", "value": "#FFFFFF" },
+    { "name": "chip_background", "value": "#F0F1F3" },
+    { "name": "start_window_background", "value": "#FAFAFA" }
+  ]
+}

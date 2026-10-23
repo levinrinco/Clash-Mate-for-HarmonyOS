@@ -1,0 +1,16 @@
+{
+  "src": [
+    "pages/Index",
+    "pages/Profiles",
+    "pages/Logs",
+    "pages/Settings",
+    "pages/SettingsProxy",
+    "pages/SettingsNetwork",
+    "pages/SettingsDns",
+    "pages/SettingsKernel",
+    "pages/SettingsApp",
+    "pages/About",
+    "pages/LogDetail",
+    "pages/Proxy"
+  ]
+}

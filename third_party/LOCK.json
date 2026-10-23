@@ -1,0 +1,24 @@
+{
+  "//": "上游快照锁定。更新依赖时同步改这里，保证任何机器上重建结果一致。",
+  "mihomo": {
+    "upstream": "https://github.com/MetaCubeX/mihomo.git",
+    "branch": "Alpha",
+    "commit": "3f27ef39f8c96bbfbc8b0b9bb10f5c9ef60149d8",
+    "commitDate": "2026-10-21",
+    "license": "GPL-3.0",
+    "note": "默认分支 main 不是内核代码，必须用 Alpha"
+  },
+  "gvisor": {
+    "module": "github.com/metacubex/gvisor",
+    "version": "v0.0.0-20260922041103-e2cbcd6e7400",
+    "license": "Apache-2.0",
+    "note": "Go 模块版本；完整依赖见 native/bridge/go.mod 和 go.sum"
+  },
+  "ClashMetaForAndroid": {
+    "upstream": "https://github.com/MetaCubeX/ClashMetaForAndroid.git",
+    "commit": "1a4f949213fcbb7f0c9e2a4a21138642d84b8f22",
+    "commitDate": "2026-10-21",
+    "license": "GPL-3.0",
+    "note": "Android 蓝本：只读参考，不参与鸿蒙构建"
+  }
+}

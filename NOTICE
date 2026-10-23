@@ -1,0 +1,71 @@
+Clash Mate for HarmonyOS
+Copyright (C) 2026 Clash Mate contributors
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+--------------------------------------------------------------------
+Third-party components
+
+mihomo
+  https://github.com/MetaCubeX/mihomo
+  License: GPL-3.0
+  Commit: 3f27ef39f8c96bbfbc8b0b9bb10f5c9ef60149d8
+  Used as: proxy core (linked as libmihomo.so)
+
+sing / sing-tun
+  https://github.com/metacubex/sing
+  https://github.com/metacubex/sing-tun
+  License: GPL-3.0
+  Used as: mihomo dependencies (versions in native/bridge/go.mod)
+
+gVisor
+  https://github.com/metacubex/gvisor
+  License: Apache-2.0
+  Version: v0.0.0-20260922041103-e2cbcd6e7400
+  Used as: userspace network stack (build tag with_gvisor)
+
+Clash Meta for Android
+  https://github.com/MetaCubeX/ClashMetaForAndroid
+  License: GPL-3.0
+  Used as: some string resources and media assets (launcher icon and
+  icons converted from its drawable resources)
+
+Material Design Icons
+  https://fonts.google.com/icons
+  License: Apache-2.0
+  Used as: icons inside the app
+
+meta-rules-dat
+  https://github.com/MetaCubeX/meta-rules-dat
+  License: GPL-3.0
+  Used as: geoip.metadb and GeoSite.dat
+  (also downloaded at runtime when the bundled files are absent)
+
+Go dependencies
+  See native/bridge/go.mod and go.sum. Major components include
+  logrus (MIT) and yaml.v3 (Apache-2.0/MIT); their source is available
+  from the module paths pinned in go.sum.
+
+HarmonyOS SDK
+  Not included in this repository. Build requires DevEco Studio and
+  the HarmonyOS SDK; the SDK is covered by its own license.
+
+--------------------------------------------------------------------
+Trademarks
+
+This is an unofficial project. It is not affiliated with, endorsed by,
+or sponsored by MetaCubeX, the Clash Meta project, or Huawei.
+"Clash", "Clash Meta", "Clash Mate" and related marks belong to their
+respective owners. GPL-3.0 grants copyright permissions only; it does
+not grant trademark rights.

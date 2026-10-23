@@ -1,0 +1,32 @@
+{
+  "shortcuts": [
+    {
+      "shortcutId": "start",
+      "label": "$string:shortcut_start",
+      "icon": "$media:ic_check_circle",
+      "wants": [
+        {
+          "bundleName": "com.dafeiyu.clashmate",
+          "abilityName": "EntryAbility",
+          "parameters": {
+            "action": "start"
+          }
+        }
+      ]
+    },
+    {
+      "shortcutId": "stop",
+      "label": "$string:shortcut_stop",
+      "icon": "$media:ic_not_interested",
+      "wants": [
+        {
+          "bundleName": "com.dafeiyu.clashmate",
+          "abilityName": "EntryAbility",
+          "parameters": {
+            "action": "stop"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "color": [
+    { "name": "background", "value": "#121212" },
+    { "name": "surface", "value": "#202020" },
+    { "name": "clash_started", "value": "#1976D2" },
+    { "name": "clash_stopped", "value": "#202020" },
+    { "name": "text_primary", "value": "#FFFFFF" },
+    { "name": "text_secondary", "value": "#B3FFFFFF" },
+    { "name": "start_window_background", "value": "#121212" }
+  ]
+}

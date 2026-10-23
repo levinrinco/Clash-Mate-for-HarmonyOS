@@ -1,0 +1,19 @@
+# 构建产物
+**/build/
+**/.hvigor/
+**/.cxx/
+**/oh_modules/
+**/.idea/
+**/local.properties
+**/*.log
+
+# 本地内核二进制（用 tools/build-bridge.ps1 重建）
+**/libmihomo.so
+apps/ClashMate/entry/libs/
+
+# 签名材料
+*.p12
+*.cer
+*.p7b
+*.csr
+*.keystore

@@ -1,0 +1,10 @@
+{
+  "app": {
+    "bundleName": "com.dafeiyu.clashmate",
+    "vendor": "metacubex",
+    "versionCode": 211036,
+    "versionName": "2.11.36.Meta",
+    "icon": "$media:app_icon",
+    "label": "$string:app_name"
+  }
+}

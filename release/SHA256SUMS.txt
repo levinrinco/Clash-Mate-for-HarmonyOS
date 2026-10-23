@@ -1,0 +1,1 @@
+SHA256 3cb8e802217c95e397b65c36c892df0b3a2f4343a5abea226b295b6b8d90158f  clashmate-2.11.36-unsigned.hap

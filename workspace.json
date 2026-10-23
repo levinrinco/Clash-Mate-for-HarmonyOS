@@ -1,0 +1,10 @@
+{
+  "name": "Clash Mate for HarmonyOS",
+  "bundlePrefix": "com.dafeiyu",
+  "targetSdkVersion": "6.0.2(22)",
+  "compatibleSdkVersion": "5.0.5(17)",
+  "runtimeOS": "HarmonyOS",
+  "deviceTypes": ["phone", "tablet"],
+  "devEcoHome": "",
+  "sdkHome": ""
+}
