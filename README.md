@@ -9,15 +9,16 @@
 > 代码以 **GPL-3.0** 发布，详见 [LICENSE](LICENSE) 与 [NOTICE](NOTICE)。
 >
 > 这是独立的鸿蒙原生实现，**不是 Clash Meta for Android 的 GitHub fork**。
-> 版本号跟随上游 CMFA，鸿蒙侧单独修复时用 `.Meta.N` 区分。
+> 版本号跟随上游 CMFA，鸿蒙侧单独修复时用 `.N` 区分。
 
 - 包名：`com.dafeiyu.clashmate`
-- 版本：`2.11.36.Meta`
+- 版本：`2.11.36.1`
 - 设备：HarmonyOS 手机 / 平板，兼容 5.0.5(17) 及以上
 
 ## 功能
 
 - 系统级 TUN VPN（`VpnExtensionAbility`），不是本地 HTTP 代理
+- IPv4 / IPv6 双栈，IPv6 可在设置里关闭
 - 桌面卡片连接/断开，不打开 App 也能连
 - 数据传输长时任务：多任务界面**一键清理**不会断连
 - 系统实况窗显示本次连接的上行/下行流量
@@ -35,13 +36,13 @@
 下载地址：
 
 - Release 页面：https://github.com/levinrinco/Clash-Mate-for-HarmonyOS/releases/latest
-- 当前版本：https://github.com/levinrinco/Clash-Mate-for-HarmonyOS/releases/download/v2.11.36/clashmate-2.11.36-unsigned.hap
-- 仓库内备份：[`release/clashmate-2.11.36-unsigned.hap`](release/clashmate-2.11.36-unsigned.hap)
+- 当前版本：https://github.com/levinrinco/Clash-Mate-for-HarmonyOS/releases/download/v2.11.36.1/clashmate-2.11.36.1-unsigned.hap
+- 仓库内备份：[`release/clashmate-2.11.36.1-unsigned.hap`](release/clashmate-2.11.36.1-unsigned.hap)
 
 校验：
 
 ```powershell
-Get-FileHash .\clashmate-2.11.36-unsigned.hap -Algorithm SHA256
+Get-FileHash .\clashmate-2.11.36.1-unsigned.hap -Algorithm SHA256
 ```
 
 期望值见 [`release/SHA256SUMS.txt`](release/SHA256SUMS.txt)。
@@ -66,7 +67,7 @@ DevEco 会自动处理调试证书、带设备 UDID 的 Profile 和签名，最�
 适合已有 `.p12` / `.cer` / `.p7b`，或者要在 CI 里签名。工具在 SDK 的 `toolchains/lib` 下：
 
 ```powershell
-java -jar "C:\path\to\hap-sign-tool.jar" sign-app -mode localSign -keyAlias "<别名>" -signAlg SHA256withECDSA -appCertFile "<app.cer>" -profileFile "<profile.p7b>" -inFile "clashmate-2.11.36-unsigned.hap" -keystoreFile "<app.p12>" -outFile "clashmate-signed.hap" -keyPwd "<key密码>" -keystorePwd "<store密码>" -signCode "1"
+java -jar "C:\path\to\hap-sign-tool.jar" sign-app -mode localSign -keyAlias "<别名>" -signAlg SHA256withECDSA -appCertFile "<app.cer>" -profileFile "<profile.p7b>" -inFile "clashmate-2.11.36.1-unsigned.hap" -keystoreFile "<app.p12>" -outFile "clashmate-signed.hap" -keyPwd "<key密码>" -keystorePwd "<store密码>" -signCode "1"
 ```
 
 - `-appCertFile` 是应用签名证书链（终端证书 → 中间 CA → 根证书）
@@ -174,7 +175,7 @@ git -C third_party/mihomo checkout 3f27ef39f8c96bbfbc8b0b9bb10f5c9ef60149d8
 - 上游参考：Clash Meta for Android `2.11.36`（commit 见 `third_party/LOCK.json`）
 - 内核：mihomo `3f27ef39f8c96bbfbc8b0b9bb10f5c9ef60149d8`
 - 跟进方式：Watch CMFA 的 Releases，按行为和资源差异移植；不合并 Android 代码，也不使用 GitHub fork 关系
-- 版本规则：`2.11.36.Meta` 对应 CMFA `2.11.36`；鸿蒙侧修复递增为 `2.11.36.Meta.1`、`.2`，同时递增 `versionCode`
+- 版本规则：`2.11.36.1` 对应 CMFA `2.11.36`；鸿蒙侧修复递增为 `.2`、`.3`，同时递增 `versionCode`
 
 ## 目录
 
@@ -192,7 +193,8 @@ release/            未签名 HAP
 - 分组名带 `/` 时 REST 路径会被拆开，切换会失败
 - 多任务界面**一键清理**不会断连；**单独上滑** Clash Mate 卡片仍会杀掉进程并断连，这是系统行为
 - App 被硬杀、未走生命周期时，桌面卡片可能短暂保留旧状态；点一下卡片会自愈
-- 只支持 IPv4 默认路由，IPv6 未接管
+- IPv4 / IPv6 双栈；IPv6 需要运营商网络和上游代理支持，可在 `设置 → 网络 → 允许 IPv6` 关闭
+- 个别 IPv6 目标可能因上游节点或规则不通，以实际目标为准
 
 ## 许可证
 

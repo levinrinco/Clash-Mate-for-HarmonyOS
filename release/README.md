@@ -1,12 +1,13 @@
 # Clash Mate for HarmonyOS · 未签名 HAP
 
-- 文件：`clashmate-2.11.36-unsigned.hap`
+- 文件：`clashmate-2.11.36.1-unsigned.hap`
 - SHA256：见 `SHA256SUMS.txt`
 - 设备：HarmonyOS 手机 / 平板，5.0.5(17) 及以上
 
 ## 特性
 
 - 系统级 TUN VPN（`VpnExtensionAbility`），基于 mihomo
+- IPv4 / IPv6 双栈
 - 桌面卡片连接/断开，不打开 App 也能连
 - 数据传输长时任务，一键清理后台不断连
 - 实况窗显示本次连接流量

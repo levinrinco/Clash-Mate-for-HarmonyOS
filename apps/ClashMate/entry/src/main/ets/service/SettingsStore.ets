@@ -25,7 +25,7 @@ export class SettingsStore {
 
     map.set('bypassPrivate', '1');
     map.set('dnsHijack', '1');
-    map.set('allowIpv6', '0');
+    map.set('allowIpv6', '1');
     map.set('tunStack', 'mips');
 
     map.set('dnsStrategy', '');

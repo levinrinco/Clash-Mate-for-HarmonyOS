@@ -21,8 +21,10 @@ const TAG: string = 'ClashMate.Vpn';
 const TUN_ADDRESS: string = '198.18.0.1';
 const TUN_PREFIX: number = 30;
 const TUN_ADDRESS6: string = 'fdfe:dcba:9876::1';
+const TUN_PREFIX6: number = 126;
 const TUN_MTU: number = 1500;
-const DNS_SERVERS: string[] = ['198.18.0.2'];
+const DNS_SERVER4: string = '198.18.0.2';
+const DNS_SERVER6: string = 'fdfe:dcba:9876::2';
 
 export default class ClashVpnAbility extends VpnExtensionAbility {
   private connection: vpnExtension.VpnConnection | undefined = undefined;
@@ -54,32 +56,53 @@ export default class ClashVpnAbility extends VpnExtensionAbility {
       return;
     }
     VpnState.set(this.context, 'connecting', '');
+    const settings = await SettingsStore.load(this.context);
+    const allowIpv6 = settings.get('allowIpv6') !== '0';
 
-    const config: vpnExtension.VpnConfig = {
-      addresses: [
-        {
-          address: { address: TUN_ADDRESS, family: 1 },
-          prefixLength: TUN_PREFIX
+    const addresses: vpnExtension.LinkAddress[] = [
+      {
+        address: { address: TUN_ADDRESS, family: 1 },
+        prefixLength: TUN_PREFIX
+      },
+      {
+        address: { address: TUN_ADDRESS6, family: 2 },
+        prefixLength: TUN_PREFIX6
+      }
+    ];
+
+    const routes: vpnExtension.RouteInfo[] = [
+      {
+        interface: 'vpn-tun',
+        destination: {
+          address: { address: '0.0.0.0', family: 1 },
+          prefixLength: 0
         },
-        {
-          address: { address: TUN_ADDRESS6, family: 2 },
-          prefixLength: 126
-        }
-      ],
-      routes: [
-        {
-          interface: 'vpn-tun',
-          destination: {
-            address: { address: '0.0.0.0', family: 1 },
-            prefixLength: 0
-          },
-          gateway: { address: TUN_ADDRESS, family: 1 },
-          hasGateway: false,
-          isDefaultRoute: true
-        }
-      ],
+        gateway: { address: TUN_ADDRESS, family: 1 },
+        hasGateway: false,
+        isDefaultRoute: true
+      }
+    ];
+    if (allowIpv6) {
+      routes.push({
+        interface: 'vpn-tun',
+        destination: {
+          address: { address: '::', family: 2 },
+          prefixLength: 0
+        },
+        gateway: { address: '::', family: 2 },
+        hasGateway: false,
+        isDefaultRoute: true
+      });
+    }
+
+    const dnsAddresses: string[] = allowIpv6 ? [DNS_SERVER4, DNS_SERVER6] : [DNS_SERVER4];
+    hilog.info(DOMAIN, TAG, 'vpn config ipv6=%{public}s routes=%{public}d dns=%{public}s',
+      allowIpv6 ? '1' : '0', routes.length, dnsAddresses.join(','));
+    const config: vpnExtension.VpnConfig = {
+      addresses: addresses,
+      routes: routes,
       mtu: TUN_MTU,
-      dnsAddresses: DNS_SERVERS,
+      dnsAddresses: dnsAddresses,
       isIPv4Accepted: true,
       isIPv6Accepted: true,
       isBlocking: false,

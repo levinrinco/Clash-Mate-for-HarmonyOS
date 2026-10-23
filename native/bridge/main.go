@@ -122,6 +122,18 @@ func BridgeStart(config *C.char, tunFd C.int, mode *C.char, logLevel *C.char, st
 		"auto-detect-interface": false,
 	}
 
+	// IPv6 双栈：TUN 路由由鸿蒙侧配置，这里打开内核的 IPv6 解析与 DNS AAAA。
+	doc["ipv6"] = true
+	if dns, ok := doc["dns"].(map[string]interface{}); ok {
+		dns["ipv6"] = true
+		if mode, _ := dns["enhanced-mode"].(string); mode == "fake-ip" {
+			if value, _ := dns["fake-ip-range6"].(string); value == "" {
+				// 避开 TUN/DNS 所在的 fdfe:dcba:9876::/126，单独划一个 fake-ip6 段。
+				dns["fake-ip-range6"] = "fdfe:dcba:9876:1::/64"
+			}
+		}
+	}
+
 	if value := C.GoString(mode); value != "" {
 		doc["mode"] = value
 	}
