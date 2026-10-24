@@ -217,7 +217,9 @@ struct Proxy {
 
   build() {
     Column() {
-      PageBar({ title: $r('app.string.proxy') })
+      Row() {
+        Column() {
+          PageBar({ title: $r('app.string.proxy') })
 
       Row({ space: 8 }) {
         ForEach(this.modeOptions(), (option: ModeOption) => {
@@ -298,6 +300,14 @@ struct Proxy {
         .layoutWeight(1)
         .scrollBar(BarState.Off)
       }
+        }
+        .width('100%')
+        .height('100%')
+        .constraintSize({ maxWidth: 1000 })
+      }
+      .width('100%')
+      .height('100%')
+      .justifyContent(FlexAlign.Center)
     }
     .width('100%')
     .height('100%')

@@ -16,6 +16,8 @@ struct SettingsApp {
   build() {
     Column() {
       PageBar({ title: $r('app.string.app_group') })
+        .constraintSize({ maxWidth: 760 })
+        .alignSelf(ItemAlign.Center)
       SettingsForm({ group: 'app' })
     }
     .width('100%')

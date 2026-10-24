@@ -54,6 +54,8 @@ struct LogDetail {
   build() {
     Column() {
       PageBar({ title: this.title.length > 0 ? this.title : '会话日志' })
+        .constraintSize({ maxWidth: 760 })
+        .alignSelf(ItemAlign.Center)
 
       Scroll() {
         Text(this.content.length > 0 ? this.content : '暂无内容')

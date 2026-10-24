@@ -29,6 +29,8 @@ struct About {
   build() {
     Column() {
       PageBar({ title: $r('app.string.about') })
+        .constraintSize({ maxWidth: 760 })
+        .alignSelf(ItemAlign.Center)
 
       Column({ space: 12 }) {
         Image($r('app.media.ic_logo'))

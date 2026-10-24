@@ -16,6 +16,8 @@ struct SettingsProxy {
   build() {
     Column() {
       PageBar({ title: $r('app.string.settings_proxy_group') })
+        .constraintSize({ maxWidth: 760 })
+        .alignSelf(ItemAlign.Center)
       SettingsForm({ group: 'proxy' })
     }
     .width('100%')

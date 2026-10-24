@@ -16,6 +16,8 @@ struct SettingsKernel {
   build() {
     Column() {
       PageBar({ title: $r('app.string.kernel_group') })
+        .constraintSize({ maxWidth: 760 })
+        .alignSelf(ItemAlign.Center)
       SettingsForm({ group: 'kernel' })
     }
     .width('100%')

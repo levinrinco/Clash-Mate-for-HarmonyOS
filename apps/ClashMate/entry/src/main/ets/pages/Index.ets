@@ -245,7 +245,8 @@ struct Index {
 
   build() {
     Scroll() {
-      Column() {
+      Row() {
+        Column() {
         Row({ space: 14 }) {
           Image($r('app.media.ic_logo'))
             .width(80)
@@ -342,7 +343,11 @@ struct Index {
           .margin({ top: 2, bottom: 2 })
       }
       .width('100%')
+      .constraintSize({ maxWidth: 760 })
       .padding({ left: 30, right: 30, top: this.topInset + 16, bottom: this.bottomInset })
+      }
+      .width('100%')
+      .justifyContent(FlexAlign.Center)
     }
     .width('100%')
     .height('100%')

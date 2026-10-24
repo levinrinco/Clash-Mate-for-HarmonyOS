@@ -77,6 +77,8 @@ struct Settings {
   build() {
     Column() {
       PageBar({ title: $r('app.string.settings') })
+        .constraintSize({ maxWidth: 760 })
+        .alignSelf(ItemAlign.Center)
 
       List() {
         ForEach(this.entries(), (entry: Entry) => {
@@ -134,6 +136,9 @@ struct Settings {
           })
         }
       }
+      .width('100%')
+      .constraintSize({ maxWidth: 760 })
+      .alignSelf(ItemAlign.Center)
       .layoutWeight(1)
       .scrollBar(BarState.Off)
     }

@@ -236,6 +236,8 @@ struct Profiles {
           })
       }
       .width('100%')
+      .constraintSize({ maxWidth: 760 })
+      .alignSelf(ItemAlign.Center)
       .height(56 + this.topInset)
       .padding({ top: this.topInset })
       .alignItems(VerticalAlign.Center)
@@ -248,6 +250,8 @@ struct Profiles {
         }
         .layoutWeight(1)
         .width('100%')
+        .constraintSize({ maxWidth: 760 })
+        .alignSelf(ItemAlign.Center)
         .justifyContent(FlexAlign.Center)
       } else {
         List({ space: 10 }) {
@@ -313,6 +317,8 @@ struct Profiles {
           }, (item: ProfileItem) => item.id)
         }
         .width('100%')
+        .constraintSize({ maxWidth: 760 })
+        .alignSelf(ItemAlign.Center)
         .layoutWeight(1)
         .padding({ left: 16, right: 16 })
         .scrollBar(BarState.Off)

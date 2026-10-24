@@ -517,6 +517,8 @@ export struct SettingsForm {
       }, (spec: Spec) => spec.key)
     }
     .width('100%')
+    .constraintSize({ maxWidth: 760 })
+    .alignSelf(ItemAlign.Center)
     .layoutWeight(1)
     .scrollBar(BarState.Off)
   }

@@ -16,6 +16,8 @@ struct SettingsNetwork {
   build() {
     Column() {
       PageBar({ title: $r('app.string.settings_network_group') })
+        .constraintSize({ maxWidth: 760 })
+        .alignSelf(ItemAlign.Center)
       SettingsForm({ group: 'network' })
     }
     .width('100%')
