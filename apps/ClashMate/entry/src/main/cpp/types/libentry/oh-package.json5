@@ -1,0 +1,9 @@
+{
+  "name": "libentry.so",
+  "version": "1.0.0",
+  "description": "Clash Mate NAPI bridge",
+  "main": "",
+  "author": "",
+  "license": "",
+  "types": "./Index.d.ts"
+}
